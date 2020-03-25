@@ -61,7 +61,7 @@ float calculateMember(int i,int j,int r,Matrix A,Matrix B){
 Matrix productMatrixMatrix(Matrix A,Matrix B,int n,int r,int m){
     Matrix R;
 
-    zeroes(R,n,m);
+    zeroes(R,n);
     for(int i=0;i<n;i++)
         for(int j=0;j<m;j++)
             R.at(i).at(j) = calculateMember(i,j,r,A,B);
@@ -102,7 +102,7 @@ Vector sumVector(Vector A,Vector B,int n){
 Matrix sumMatrix(Matrix A,Matrix B,int n,int m){
     Matrix R;
 
-    zeroes(R,n,m);
+    zeroes(R,n);
     for(int i=0;i<n;i++)
         for(int j=0;j<m;j++)
             R.at(i).at(j) = A.at(i).at(j)+B.at(i).at(j);
